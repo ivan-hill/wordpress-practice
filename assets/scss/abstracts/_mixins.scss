@@ -1,0 +1,130 @@
+// breakpoints
+
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+ @mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+ }
+
+//  spacing
+
+@mixin spacing-content {
+    padding: 0 $spacing-content-s;
+    @include sm {
+        padding: 0 $spacing-content-m;
+    }
+    @include xl {
+        padding: 0 $spacing-content-l;
+    }
+    
+}
+
+//  utils
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin flex-between {
+    @include flex-row;
+    justify-content: space-between;
+}
+
+@mixin flex-center {
+    @include flex-row;
+    justify-content: center;
+}
+
+@mixin flex-end {
+    @include flex-row;
+    justify-content: flex-end;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin fixed-image-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-hero;
+    overflow: hidden;
+}
+
+@mixin  grid-section {
+    @include flex-column;
+    @include lg {
+        @include flex-between;
+        align-items: flex-start;
+    }
+}
+
+@mixin translate-even-children {
+    padding-bottom: 15%;
+    *:nth-child(even) {
+        transform: translateY(15%);
+    }
+}
+
+@mixin block-standard-spacing {
+    padding: $spacing-xl 0 0;
+    @include md {
+        padding: $spacing-xxl 0 0;
+    }
+    @include lg {
+        padding: $spacing-xxxl 0 0;
+    }
+}
+
+@mixin block-standard-spacing-centered {
+    margin: 0 auto;
+    padding: $spacing-xl $spacing-m 0;
+    @include md {
+        padding: $spacing-xxl $spacing-xl 0;
+    }
+    @include lg {
+        padding: $spacing-xxxl $spacing-xl 0;
+    }
+}
+
+@mixin spacing-top {
+    padding-top: $spacing-xl;
+    @include md {
+        padding-top: $spacing-xxl;
+    }
+    @include lg {
+        padding-top: $spacing-xxxl;
+    }
+}

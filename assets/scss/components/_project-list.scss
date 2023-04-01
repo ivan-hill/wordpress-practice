@@ -1,0 +1,30 @@
+.project-list {
+    @include flex-between;
+    .project-item {
+        margin: $spacing-m 0;
+        @include md {
+           margin: $spacing-m 0;
+           width: 45%;
+        }
+
+        .image-wrapper {
+            overflow: hidden;
+            height: 220px;
+            @include md {
+                height: 180px;
+            }
+            @include lg {
+                height: 250px;
+            }
+            @include xl {
+                height: 320px;
+            }
+            a {
+                .project-item-image {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

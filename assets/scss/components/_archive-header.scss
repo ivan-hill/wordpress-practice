@@ -1,0 +1,10 @@
+.archive-header {
+   margin-top: $spacing-l;
+   @include lg {
+   margin-top: 0
+   }
+   padding: $spacing-m 0 $spacing-s;
+   @include lg {
+      padding: 0;
+   }
+}

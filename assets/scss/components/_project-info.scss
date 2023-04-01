@@ -1,0 +1,43 @@
+.project-header {
+   @include grid-section;
+   @include spacing-top;
+   .project-info {
+   @include spacing-content;
+        @include sm {
+            max-width: 80%;
+        }
+       @include lg {
+           width: $column-width;
+           padding-right: $spacing-content-m;
+       }
+
+       .taxonomy {
+           display: flex;
+           flex-wrap: wrap;
+           margin: $spacing-m 0;
+           @include md {
+               margin: $spacing-l 0;
+           }
+           div {
+               margin-right: $spacing-m;
+               @include md {
+                   margin-right: $spacing-l;
+               }
+               @include xl {
+                margin-right: $spacing-xl;
+            }
+           }
+       }
+   }
+
+   .image-wrapper {
+       margin-top: $spacing-content-m;
+        @include lg {
+            margin-top: 0;
+            width: $column-width;
+        }
+        .project-info-image {
+            max-height: 500px;
+        }
+   }
+}

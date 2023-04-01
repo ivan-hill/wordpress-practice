@@ -1,0 +1,7 @@
+.grid-images {
+    @include flex-between;
+    @include block-standard-spacing;
+    .image-wrapper {
+        width: $column-width;
+    }
+}

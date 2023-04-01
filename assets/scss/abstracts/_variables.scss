@@ -1,0 +1,61 @@
+// fonts
+$main-font: 'Open Sans', Arial, Helvetica, sans-serif;
+
+// z-index
+$z-hero: -1;
+$z-content: 1;
+$z-cover: 3;
+$z-nav: 2;
+$z-header: 4;
+
+// colors
+$color-primary: #002856;
+$color-primary-dark: #061930;
+$color-light: #fff;
+$color-dark: #151515;
+$grey-100: #fcfcfc;
+$grey-200: #eee;
+$grey-300: #ddd;
+$grey-400: #aaa;
+$grey-500: #999;
+
+// breakpoints
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+// fonts
+$font-xxs: 8px;
+$font-xs: 12px;
+$font-s: 14px;
+$font-m: 16px;
+$font-l: 22px;
+$font-xl: 34px;
+$font-xxl: 48px;
+$font-hero-s: 30px;
+$font-hero-m: 36px;
+$font-hero-l: 42px;
+$font-hero-xl: 56px;
+
+// spacing
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-s: 12px;
+$spacing-m: 20px;
+$spacing-l: 30px;
+$spacing-xl: 50px;
+$spacing-xxl: 80px;
+$spacing-xxxl: 140px;
+$spacing-content-s: 5vw;
+$spacing-content-m: 8vw;
+$spacing-content-l: 10vw;
+
+// shadows
+$shadow-primary: 0px 0px 15px -10px #000000a2;
+
+// columns
+$column-width: 47%;
+
+// transitions
+$transition: cubic-bezier(0.785, 0.135, 0.15, 0.86);

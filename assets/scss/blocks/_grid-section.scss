@@ -1,0 +1,42 @@
+.grid-section {
+   @include grid-section;
+   @include spacing-top;
+    .wrapper-content {
+
+        @include lg {
+            width: 50%;
+        }
+
+        .content-inner {
+            @include spacing-content;
+            @include sm {
+                max-width: 80%;
+            }
+            @include lg {
+                max-width: 100%;
+                padding-top: $spacing-l;
+            }
+        }
+
+        .images {
+            display: none;
+            @include lg {
+                display: block;
+                @include spacing-content;
+            }
+            img {
+                margin: $spacing-xl 0;
+            }
+        }
+
+    }
+
+    .wrapper-image {
+        margin-top: $spacing-l;
+        @include lg {
+            width: $column-width;
+            margin-top: 0;
+        }
+
+    }
+}

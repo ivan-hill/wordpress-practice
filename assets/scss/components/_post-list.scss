@@ -1,0 +1,42 @@
+.post-list {
+    @include flex-between;
+    @include md {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: $spacing-l;
+    }
+    .post-item {
+        margin: $spacing-m 0;
+        width: 100%;
+        @include sm {
+            width: 40%;
+        }
+        @include md {
+            margin: $spacing-l 0;
+            width: 100%;
+        }
+        .image-wrapper {
+            height: 50vw;
+            overflow: hidden;
+            @include sm {
+                height: 160px;
+            }
+            @include lg {
+                height: 200px;
+            }
+            @include xl {
+                height: 230px;
+            }
+            a {
+                .post-item-image {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        .post-info {
+            margin: $spacing-m 0;
+        }
+    }
+}

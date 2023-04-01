@@ -1,0 +1,25 @@
+.contact-info {
+    .info-list {
+        .info-item {
+            margin: $spacing-m 0;
+            @include flex-row;
+            .icon {
+                width: 1.4em;
+            }
+            .field {
+                margin-left: $spacing-m;
+                font-weight: 600;
+            }
+
+        }
+    }
+    .contact-image {
+        display: none;
+        @include lg {
+            display: block;
+            width: 70%;
+            height: 30vh;
+            margin-top: $spacing-xl;
+        }
+    }
+}

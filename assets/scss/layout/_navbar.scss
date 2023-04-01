@@ -1,0 +1,129 @@
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $z-header;
+    padding: $spacing-s $spacing-m;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-light;
+    box-shadow: $shadow-primary;
+    @include lg {
+        padding: $spacing-s $spacing-xl;
+    }
+    @include xl {
+        padding: $spacing-s $spacing-xxl;
+    }
+    .site-branding {
+        a {
+            img {
+                width: 60px;
+                @include md {
+                    width: 75px;
+                }
+                @include lg {
+                    width: 70px;
+                }
+            }
+        }
+    }
+    .main-navigation {
+        display: none;
+        @include lg {
+            display: block;
+        }
+        div {
+            .menu {
+                display: flex;
+                li {
+                    margin: 0 $spacing-s;
+                }
+              }   
+        }
+    }
+
+    .nav-indicator {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        top: 75%;
+        width: 20px;
+        height: 2px;
+        background-color: $color-primary;
+        &.visible {
+            transition: all 0.5s $transition;
+        }
+    }
+
+    .hamburger {
+        padding: 4px;
+        span {
+            display: block;
+            width: 36px;
+            height: 2px;
+            margin: 4px 0;
+            background-color: $color-primary;
+            transition: 0.4s ease-in-out;
+        }
+        @include lg {
+            display: none;
+        }
+        &.active {
+            span {
+                &:nth-child(1) {
+                  transform: translateY(3px);  
+                }
+                &:nth-child(2) {
+                    transform: translateY(-3px);  
+                  }
+            }
+        }
+    }
+}
+
+.nav-wrapper-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $grey-100;
+    z-index: $z-nav;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.5s ease-in-out 0.8s;
+    @include flex-center;
+    @include lg {
+        display: none;
+    }
+    .menu {
+            li {
+                margin: $spacing-s 0;
+                opacity: 0;
+                transform: translateY(12px);
+                transition: 0.5s ease-in-out 0.2s;
+                display: flex;
+                justify-content: center;
+                a {
+                    text-align: center;
+                    padding: $spacing-xs;
+                    font-size: $font-m;
+                }
+            }
+    }
+}
+
+.nav-wrapper-mobile.active {
+    transform: scaleX(1);
+    transition: 0.5s ease-in-out;
+    .menu {
+        li {
+            opacity: 1;
+            transform: translateY(0);
+            transition: 0.3s ease-in-out 0.5s;
+        }
+    }
+}

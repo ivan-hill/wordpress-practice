@@ -1,0 +1,21 @@
+.content {
+    background-color: $color-light;
+}
+
+.content-margin {
+    margin-top: 100vh;
+}
+
+.content-margin-responsive {
+    margin-top: 50vh;
+    @include lg {
+        margin-top: 100vh;
+    }
+}
+
+.content-narrow {
+    @include block-standard-spacing-centered;
+    @include lg {
+        max-width: 1280px;
+    }
+}
